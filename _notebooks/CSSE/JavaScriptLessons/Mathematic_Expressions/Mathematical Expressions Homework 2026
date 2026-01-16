@@ -1,0 +1,117 @@
+---
+layout: post
+title: "Mathematical Expressions Homework 2026"
+categories:
+  - JavaScript
+courses:
+  csse:
+    week: 5
+permalink: /javascript/math/team-lesson-homework/
+author: "Authors - Samaghna Deshatty, Isha Chaturvedi, Ayden Dudley"
+---
+
+Homework!
+
+/* 
+In order to learn this subject of programming well, you have to practice:
+
+Popcorn hack 1: operations with variables
+
+Popcorn hack 2: Make 2 variables x, and y. Compute 3 different operations and log it into the console with console.log();
+
+Final Task: Build a system of functions that represent different mathematical expressions. Each of these functions will perform a different mathematical operation (ex: add, subtract). Make at least 5 of these different functions.
+*/
+/* 
+Popcorn Hack 1 (Progress Check)
+
+Part 1:
+Create two variables, val1 and val2. 
+Set val1 to 8 and val2 to 4.  
+Then compute the expression:
+
+(val1 * val2) + (val1 / 2)
+
+This expression should equal 36.
+
+Part 2:
+Using the same variables, create a new variable called totalValue.  
+Set totalValue equal to:
+
+val1 / val2 + 2 ** 3
+
+Then compute the final expression:
+
+(totalValue + 20) - val1 ** 2 / 4
+
+Write your code below:
+
+// put your popcorn hack 1 code here:
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Runner</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    textarea { width: 100%; height: 200px; font-family: monospace; }
+    #output { background: #111; color: #0f0; padding: 10px; margin-top: 10px; min-height: 60px; white-space: pre-wrap; }
+    button { margin-top: 10px; padding: 8px 16px; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <h2>Code Runner</h2>
+  <p>Type your JavaScript code below and click "Run Code".</p>
+
+  <textarea id="code">// write your JavaScript here</textarea>
+  <br>
+  <button onclick="runCode()">Run Code</button>
+
+  <h3>Output:</h3>
+  <div id="output"></div>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById('code').value;
+      const outputDiv = document.getElementById('output');
+      outputDiv.textContent = '';
+
+      const originalLog = console.log;
+      console.log = function (...args) {
+        outputDiv.textContent += args.join(' ') + '\n';
+        originalLog.apply(console, args);
+      };
+
+      try {
+        new Function(code)();
+      } catch (err) {
+        outputDiv.textContent += 'Error: ' + err.message;
+      }
+
+      console.log = originalLog;
+    }
+  </script>
+
+</body>
+</html>
+
+// Part 1
+let val1 = 8;
+let val2 = 4;
+
+console.log((val1 * val2) + (val1 / 2)); 
+// Expected output: 36
+
+// Part 2
+let totalValue = val1 / val2 + 2 ** 3;
+
+console.log((totalValue + 20) - val1 ** 2 / 4);
+
+
+
+
+
+
+
