@@ -20,7 +20,7 @@ description: "Class of 2026"
 owner_name: Open Coding Society 
 github_username: CaptainSam12 
 github_repo: "Pages-Team-Repo" 
-baseurl: "/js.mathematicalexpressions/" 
+baseurl: "/js.mathematicalexpressions" 
 future: true
 
 # Exclude from Jekyll watch - these are processed by our conversion scripts
